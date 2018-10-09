@@ -19,23 +19,6 @@ var fs = require('fs');
 
 
 
-client.on('ready', function(){ // Leaked by [ @Fr3on Gamer#9338 ]
-    var ms = 30000 ;
-    var setGame = [`Vip Bot `];
-    var i = -1;
-    var j = 0;
-    setInterval(function (){
-        if( i == -1 ){
-            j = 1;
-        }
-        if( i == (setGame.length)-1 ){
-            j = -1;
-        }
-        i = i+j;
-        client.user.setGame(setGame[i],`http://www.twitch.tv/kokoseda`);
-    }, ms);30000
-
-});
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////اذا جاك ايرور وقت تشغيل البوت وقالك الجيسون فيه غلط///////////////////////////
