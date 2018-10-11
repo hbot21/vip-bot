@@ -33,7 +33,7 @@ var fs = require('fs');
 //////////////////////////////////////////////iyvu
 
 client.on('message', ra3d => { // Leaked by [ @Fr3on Gamer#9338 ]
-            var prefix = "r";
+            var prefix = "$";
   if (ra3d.content ===  prefix + 'cc'){
               if (!ra3d.member.hasPermission('MANAGE_ROLES')) return ra3d.channel.sendMessage('`**⚠ | `[MANAGE_ROLES]` لا يوجد لديك صلاحية**');
               ra3d.channel.send("**✅ | يتم عمل الالوان**");
@@ -49,7 +49,7 @@ client.on('message', ra3d => { // Leaked by [ @Fr3on Gamer#9338 ]
 
 
   client.on('message' , ReBeL => { // Leaked by [ @Fr3on Gamer#9338 ]
-var prefix = "-";
+var prefix = "$";
 if(ReBeL.author.bot) return;
 if(ReBeL.channel.type == 'dm') return;
 if(ReBeL.content.startsWith(prefix + "dc")) {
@@ -118,7 +118,6 @@ let welcomer = member.guild.channels.find("name","welcome");
         .setThumbnail(h.avatarURL)
         .setAuthor(h.username,h.avatarURL)
         .addField(': تاريخ دخولك الدسكورد',`${moment(member.user.createdAt).format('D/M/YYYY h:mm a')} **\n** \`${moment(member.user.createdAt).fromNow()}\``,true)
-         .addField(': تاريخ دخولك السيرفر',`${moment(member.joinedAt).format('D/M/YYYY h:mm a ')} \n\`\`${moment(member.joinedAt).startOf(' ').fromNow()}\`\``, true)
          .setFooter(`${h.tag}`,"https://images-ext-2.discordapp.net/external/JpyzxW2wMRG2874gSTdNTpC_q9AHl8x8V4SMmtRtlVk/https/orcid.org/sites/default/files/files/ID_symbol_B-W_128x128.gif")
      welcomer.send({embed:norelden});
 
