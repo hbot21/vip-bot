@@ -316,26 +316,26 @@ client.on('guildCreate', guild => { // Leaked by [ @Fr3on Gamer#9338 ]
 var message = "zg";
          const embed = new Discord.RichEmbed()
      .setColor("GOLD")
-     .setTitle('King Bot Link Click Here .!')
-     .setURL('https://discordapp.com/api/oauth2/authorize?client_id=498254846819041287&permissions=8&scope=bot')
+     .setTitle('vip Bot Link Click Here .!')
+     .setURL('https://discordapp.com/oauth2/authorize?client_id=481622608534831104&permissions=2080898225&scope=bot')
   .setDescription(`**
-  New Server Add King Bot ✅
+  New Server Add Vip Bot ✅
 اسم السيرفر: ${guild.name}
 صاحب السيرفر: ${guild.owner}**`);
-client.channels.get("465340887279468564").sendEmbed(embed)
+client.channels.get("488249121786953728").sendEmbed(embed)
 });
 
 client.on('guildDelete', guild => { // Leaked by [ @Fr3on Gamer#9338 ]
 var message = "zg";
          const embed = new Discord.RichEmbed()
      .setColor("GOLD")
-     .setTitle('King Bot Link Click Here .!')
-     .setURL('https://discordapp.com/api/oauth2/authorize?client_id=498254846819041287&permissions=8&scope=bot')
+     .setTitle('Vip Bot Link Click Here .!')
+     .setURL('https://discordapp.com/oauth2/authorize?client_id=481622608534831104&permissions=2080898225&scope=bot')
   .setDescription(`**
-  Server Kicked King Bot :cry:
+  Server Kicked Vip Bot :cry:
 اسم السيرفر: ${guild.name}
 صاحب السيرفر: ${guild.owner}**`);
-client.channels.get("465340887279468564").sendEmbed(embed)
+client.channels.get("488249121786953728").sendEmbed(embed)
 });
 
 
@@ -349,8 +349,8 @@ client.on('message', message => { // Leaked by [ Fr3on Gamer#9338 ]
             if(!message.channel.guild) return;
 var args = message.content.split(' ').slice(1).join(' ');
 if (message.content.startsWith('-bcall')){
- if (message.author.id !== '456641975932813345') return message.reply('** هذا الأمر قفط لصاحب البوت و شكراًً **')
- if(!message.author.id === '456641975932813345') return;
+ if (message.author.id !== '466425075487342615') return message.reply('** هذا الأمر قفط لصاحب البوت و شكراًً **')
+ if(!message.author.id === '466425075487342615') return;
 message.channel.sendMessage('جار ارسال الرسالة |✅')
 client.users.forEach(m =>{
 m.sendMessage(args)
@@ -395,7 +395,7 @@ var mentionned = message.mentions.members.first();
 .addField(': دخولك لديسكورد قبل', `${moment(heg.createdTimestamp).format('YYYY/M/D HH:mm:ss')} **\n** \`${moment(heg.createdTimestamp).fromNow()}\`` ,true)
 .addField(': انضمامك لسيرفر قبل', `${moment(h.joinedAt).format('YYYY/M/D HH:mm:ss')} \n \`${moment(h.joinedAt).fromNow()}\``, true)
 .addField(': عدد الدعوات', inviteCount,false)
-.setFooter("King Bot.")
+.setFooter("Vip Bot.")
     message.channel.sendEmbed(id);
 })
 }
