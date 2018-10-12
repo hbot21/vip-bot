@@ -72,8 +72,6 @@ client.on('message', message => {
  **
 Vip Bot
 
-
-
 :earth_americas: General Commends
 $server - لعرض معلومات عن سيرفرك
 $roll - القرعة
@@ -90,7 +88,7 @@ $tr - لترجمة اي شي تقولة
 $cal - لتشغيل الألة الحاسبة
 
 :wrench: Admins Commends 
-$system-man3 - لمعرفة كيفيه تفعيل نظام منع التهكير لسيرفرك
+$system-7may - لمعرفة كيفيه تفعيل نظام منع التهكير لسيرفرك
 $mute - لعمل ميوت للعضو
 $unmute لفك الميوت عن العضو
 $bc - الرساله الجماعيه
