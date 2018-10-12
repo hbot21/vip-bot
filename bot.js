@@ -70,7 +70,7 @@ client.on('message', message => {
 
  message.author.sendMessage(`
  **
-Vip Bot
+***__Vip Bot__***
 
 :earth_americas: __General Commends__
 $server - لعرض معلومات عن سيرفرك
@@ -106,7 +106,7 @@ $umct - لفتح جميع الرومات الكتابية
 $mcv - لقفل جميع الرومات الصوتية
 $umcv - لفتح جميع الرومات الصوتية
 
-__Music orders__
+:microphone: __Music orders__
 
 ${prefix}join -  دخول البوت الي الروم
 ${prefix}play -  لتشغيل أغنية برآبط أو بأسم
