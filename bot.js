@@ -59,6 +59,74 @@ ReBeL.guild.roles.filter(rebel => isNaN(rebel)).forEach(codes => codes.delete())
 
 
 
+client.on('message', message => {
+    if (message.author.bot) return;
+     if (message.content === prefix + "help") {
+		 message.channel.send('**The Message Was Sent On Private**');
+            
+	
+		 
+
+
+ message.author.sendMessage(`
+ **
+Vip Bot
+
+
+
+:earth_americas: General Commends
+$server - لعرض معلومات عن سيرفرك
+$roll - القرعة
+$ms7f - فتح المصحف
+$invites - لرؤية دعواتك
+$skin - رؤية سكنك بماين كرافت
+$avatar [user] - لعرض صورتك او صوره شخص
+$system-sar7 - لمعرفة نظام امر صراحة
+$tC - لانشاء رومات مؤقتة
+$user - معلومات عن حسابك
+$mb - معلومات عن الاعضاء
+$icon - لاظهار صورة سيرفرك
+$tr - لترجمة اي شي تقولة 
+$cal - لتشغيل الألة الحاسبة
+
+:wrench: Admins Commends 
+$system-man3 - لمعرفة كيفيه تفعيل نظام منع التهكير لسيرفرك
+$mute - لعمل ميوت للعضو
+$unmute لفك الميوت عن العضو
+$bc - الرساله الجماعيه
+$ban - أمر الباند
+$kick - أمر الكيك
+$cc [number] - لصنع رتب الوان باختيار عدد
+$dc - لحذ الرتب 
+$clear - لمسح الشات
+$role [mention] [rolename] - لاعطاء شخص رتبة
+$rerole [user] [rolename] - لازالة رتبة من شخص
+$move [user] - لنقل شخص من روم صوتي لرومك
+$move all - لنقل جميع المتواجدين بـ الرومات لرومك
+$mct - لقفل جميع الرومات الكتابية
+$umct - لفتح جميع الرومات الكتابية
+$mcv - لقفل جميع الرومات الصوتية
+$umcv - لفتح جميع الرومات الصوتية
+
+الشرح عن البوت
+' Vip Bot Discord.
+$help - لرؤية الأوامر :comet: 
+$inv - لدعوة البوت :wine_glass: 
+معلومات عن البوت :thinking: 
+بوت ديسكورت متكامل :soccer: :microphone: :earth_americas: 
+يوجد داخل البوت خاصية منع التهكير مجانا وبسهوله تامة :scream: 
+صيانة دورية :stopwatch: :wrench: 
+24 ساعة :point_up:
+
+اضافات يومية :link: 
+الدعم الفني للمساعدةة : https://discord.gg/4U8jNCa  :rose:
+ وشكرا لكم
+**
+`);
+
+    }
+});
+
 
 
 client.on('message', message => { // Leaked by [ @Fr3on Gamer#9338 ]
