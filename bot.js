@@ -72,7 +72,7 @@ client.on('message', message => {
  **
 Vip Bot
 
-:earth_americas: General Commends
+:earth_americas: __General Commends__
 $server - لعرض معلومات عن سيرفرك
 $roll - القرعة
 $ms7f - فتح المصحف
@@ -87,7 +87,7 @@ $icon - لاظهار صورة سيرفرك
 $tr - لترجمة اي شي تقولة 
 $cal - لتشغيل الألة الحاسبة
 
-:wrench: Admins Commends 
+:wrench: __Admins Commends__ 
 $system-7may - لمعرفة كيفيه تفعيل نظام منع التهكير لسيرفرك
 $mute - لعمل ميوت للعضو
 $unmute لفك الميوت عن العضو
@@ -105,6 +105,16 @@ $mct - لقفل جميع الرومات الكتابية
 $umct - لفتح جميع الرومات الكتابية
 $mcv - لقفل جميع الرومات الصوتية
 $umcv - لفتح جميع الرومات الصوتية
+
+__Music orders__
+
+${prefix}join -  دخول البوت الي الروم
+${prefix}play -  لتشغيل أغنية برآبط أو بأسم
+${prefix}skip - لتجآوز الأغنية الحآلية
+${prefix}pause -  إيقآف الأغنية مؤقتا
+${prefix}resume -  لموآصلة الإغنية بعد إيقآفهآ مؤقتا
+${prefix}vol - لتغيير درجة الصوت 100 - 0
+${prefix}stop -  لإخرآج البوت من الروم
 
 الشرح عن البوت
 ' Vip Bot Discord.
