@@ -6,7 +6,7 @@ client.on('ready', () => { // Leaked by [ @Fr3on Gamer#9338 ]
 });
 
 client.on('message', message => { // Leaked by [ @Fr3on Gamer#9338 ]
-    if (message.content === 'zg') {
+    if (message.content === 'ha') {
     	message.reply('pong');
   	}
 });
@@ -62,7 +62,7 @@ ReBeL.guild.roles.filter(rebel => isNaN(rebel)).forEach(codes => codes.delete())
 client.on('message', message => {
     if (message.author.bot) return;
      if (message.content === prefix + "help") {
-		 message.channel.send('**The Message Was Sent On Private**');
+		 message.channel.send('**تم ارسال ألاومر في الخاص**');
             
 	
 		 
@@ -147,7 +147,7 @@ client.on('message', message => { // Leaked by [ @Fr3on Gamer#9338 ]
             message.channel.send({embed: {
                 color: 3447003,
                 author: {
-                  name: 'King Bot\'s translator',
+                  name: 'Vip Bot\'s translator',
                   icon_url: client.user.avatarURL
                 },
                 fields: [{
@@ -158,7 +158,7 @@ client.on('message', message => { // Leaked by [ @Fr3on Gamer#9338 ]
                 timestamp: new Date(),
                 footer: {
                   icon_url: client.user.avatarURL,
-                  text: "King Bot"
+                  text: "Vip Bot"
                 }
               }
             });
@@ -263,7 +263,7 @@ client.on("message", message => { // Leaked by [ @Fr3on Gamer#9338 ]
 
 
 client.on("message",function(message) { // Leaked by [ @M3a4x ]
-    if(message.content.startsWith(prefix + 'stats')) {
+    if(message.content.startsWith(prefix + 'bot')) {
         var uptime = client.uptime;
 
     var days = 0;
@@ -303,13 +303,13 @@ var v1 = new Discord.RichEmbed()
   v1.setTimestamp(new Date())
   v1.setColor("#6a109d")
   v1.setDescription('***__ انتظر .. جاري الحصول علي البيانات __***')
-  v1.setFooter("# | S TeaM |")
+  v1.setFooter("# | Vip Bot |")
 var heroo = new Discord.RichEmbed()
 .setColor('#6a109d')
 .setTimestamp(new Date())
 .setThumbnail(client.user.avatarURL)
-.setTitle('King Bot Info')
-.setURL('https://discordapp.com/api/oauth2/authorize?client_id=498254846819041287&permissions=8&scope=bot')
+.setTitle('Vip Bot Info')
+.setURL('https://discordapp.com/oauth2/authorize?client_id=481622608534831104&permissions=2080898225&scope=bot')
 .setAuthor(client.user.username,client.user.avatarURL)
 .addField("**البرفكس** :",`**[ ${prefix} ]**`,true)
 .addField("**السيرفرات** :","**[ "+client.guilds.size+" ]**",true)
@@ -416,7 +416,7 @@ client.channels.get("488249121786953728").sendEmbed(embed)
 client.on('message', message => { // Leaked by [ Fr3on Gamer#9338 ]
             if(!message.channel.guild) return;
 var args = message.content.split(' ').slice(1).join(' ');
-if (message.content.startsWith('-bcall')){
+if (message.content.startsWith('$bcall')){
  if (message.author.id !== '466425075487342615') return message.reply('** هذا الأمر قفط لصاحب البوت و شكراًً **')
  if(!message.author.id === '466425075487342615') return;
 message.channel.sendMessage('جار ارسال الرسالة |✅')
@@ -608,18 +608,7 @@ client.on('message', function(message) { // Leaked by [ @Fr3on Gamer#9338 ]
     }
 });
 
-   client.on('message',function(message) { // Leaked by [ @Fr3on Gamer#9338 ]
-      if(message.content === prefix + "inv") {
-          if(!message.channel.guild) return;
-          var mmmmEmbed = new Discord.RichEmbed()
-          .setAuthor(client.user.username)
-          .setTitle('-  اضغط هنا !.')
-          .setURL(`https://discordapp.com/api/oauth2/authorize?client_id=498254846819041287&permissions=8&scope=bot`)
-          .setThumbnail(client.user.avatarURL)
-          .setFooter(`- Requested By: ${message.author.tag}`,message.author.avatarURL);
-          message.channel.send(mmmmEmbed)
-      }
-   });
+
 
 client.on('message',  message =>{ // Leaked by [ @Fr3on Gamer#9338 ]
 var moruad = 60000;
@@ -794,88 +783,10 @@ coll.first().delete()
 
 
 
-	client.on('message', async msg => { // Leaked by [ @Fr3on Gamer#9338 ]
-	var prefix = "$";
-	var user = msg.author;
-		if (msg.content === (prefix +'help')) {
-		if(!msg.channel.guild) return msg.channel.send('**هذا الأمر فقط للسيرفرات**').then(m => m.delete(5000));
-		msg.channel.send({embed: new Discord.RichEmbed()
- .setAuthor(client.user.username , client.user.avatarURL)
- .setThumbnail(msg.author.avatarURL)
- .setTitle(`Welcome To ${msg.guild.name}`)
-           .setFooter(`- Requested By: ${msg.author.tag}`,msg.author.avatarURL)
-  .setURL('https://discordapp.com/api/oauth2/authorize?client_id=498254846819041287&permissions=8&scope=bot')
- .setDescription(`**اذا كنت تريد الاوامر العامة اظغط الريكشن** 🌏 \n**اذا كنت تريد الاوامر الادارية اظغط الريكشن**🔧 \n**اذا كنت تريد بعض الشرح عن البوت اضغط الريكشن**💥 \n**اذا كنت تريد الالغاء اظغط الريكشن **❌\n              **وشكرا لمستخدمين البوت**`)
-
- .setTimestamp()
-}).then(zg => {
-     zg.react('🌏').then(r=>{
-     zg.react('🔧').then(r=>{
-     zg.react('💥').then(r=>{
-     zg.react('❌').then(r=>{
- var aaa = (reaction, user) => reaction.emoji.name === '🌏' && user.id === msg.author.id;
-   var mmm = (reaction, user) => reaction.emoji.name === '🔧' && user.id === msg.author.id;
-    var vvv = (reaction, user) => reaction.emoji.name === '💥' && user.id === msg.author.id;
-    var ccc = (reaction, user) => reaction.emoji.name === '❌' && user.id === msg.author.id;
-
-    var aa = zg.createReactionCollector(aaa, { maxMatches:1 , time: 60000 , });
-    var mm = zg.createReactionCollector(mmm, { maxMatches:1 , time: 60000 , });
-    var vv = zg.createReactionCollector(vvv, { maxMatches:1 , time: 60000 , });
-    var cc = zg.createReactionCollector(ccc, { maxMatches:1 , time: 60000 , });
-
-aa.on("collect", r => {
-	zg.edit({embed: new Discord.RichEmbed()
- .setAuthor(client.user.username , client.user.avatarURL)
- .setThumbnail(msg.author.avatarURL)
- .setTitle(`Welcome To ${msg.guild.name}`)
-          .setFooter(`- Requested By: ${msg.author.tag}`,msg.author.avatarURL)
-  .setURL('https://discordapp.com/api/oauth2/authorize?client_id=498254846819041287&permissions=8&scope=bot')
-.setDescription(`**:earth_americas:  General Commends**\n${prefix}**server - لعرض معلومات عن سيرفرك**\n${prefix}**roll - القرعة**\n${prefix}**ms7f - فتح المصحف**\n${prefix}**invites - لرؤية دعواتك**\n${prefix}**skin - رؤية سكنك بماين كرافت**\n$**avatar [user] - لعرض صورتك او صوره شخص**\n$**system-sar7 - لمعرفة نظام امر صراحة**\n$**tC - لانشاء رومات مؤقتة**\n$**user - معلومات عن حسابك**\n$**mb - معلومات عن الاعضاء**\n$**icon - لاظهار صورة سيرفرك**\n$**tr - لترجمة اي شي تقولة **\n$**cal - لتشغيل الألة الحاسبة**`)
-
- .setTimestamp()
-	});
+	
 
 
-	})//خراااااااااااااااااااااااااااااااااااااااااااااااااااااااااا
-mm.on("collect", r => {
-	zg.edit({embed: new Discord.RichEmbed()
- .setAuthor(client.user.username , client.user.avatarURL)
- .setThumbnail(msg.author.avatarURL)
- .setTitle(`Welcome To ${msg.guild.name}`)
-           .setFooter(`- Requested By: ${msg.author.tag}`,msg.author.avatarURL)
-  .setURL('https://discordapp.com/api/oauth2/authorize?client_id=498254846819041287&permissions=8&scope=bot')
-.setDescription(`** :wrench: Admins Commends** \n$**system-man3 - لمعرفة كيفيه تفعيل نظام منع التهكير لسيرفرك**\n${prefix}**mute - لعمل ميوت للعضو**\n${prefix}**unmute لفك الميوت عن  العضو**\n${prefix}**bc - الرساله الجماعيه**\n${prefix}**ban - أمر الباند**\n**$kick - أمر الكيك**\n${prefix}**cc [number] - لصنع رتب الوان باختيار عدد**\n${prefix}**dc - لحذف جميع رتب الالوان فقط**\n**$clear - لمسح الشات**\n$**role [mention] [rolename] - لاعطاء شخص رتبة**\n$**rerole [user] [rolename] - لازالة رتبة من شخص**\n$**move [user] - لنقل شخص من روم صوتي لرومك**\n$**move all - لنقل جميع المتواجدين بـ الرومات لرومك**\n$**mct - لقفل جميع الرومات الكتابية**\n$**umct - لفتح جميع الرومات الكتابية**\n$**mcv - لقفل جميع الرومات الصوتية**\n$**umcv - لفتح جميع الرومات الصوتية**`)
 
-.setTimestamp()
-	});
-
-	})
-vv.on("collect", r => {
-    zg.edit({embed: new Discord.RichEmbed ()
-.setAuthor(client.user.username , client.user.avatarURL)
- .setThumbnail(msg.author.avatarURL)
- .setTitle(`Welcome To ${msg.guild.name}`)
-           .setFooter(`- Requested By: ${msg.author.tag}`,msg.author.avatarURL)
-  .setURL('https://discordapp.com/api/oauth2/authorize?client_id=498254846819041287&permissions=8&scope=bot')
-.setDescription(`**' King Bot Discord.\n$help - لرؤية الأوامر :comet: \n$inv - لدعوة البوت :wine_glass: \n معلومات عن البوت :thinking: \n بوت ديسكورت متكامل :soccer: :microphone: :earth_americas: \nيوجد داخل البوت خاصية منع التهكير مجانا وبسهوله تامة :scream: \nصيانة دورية :stopwatch: :wrench: \n 24 ساعة :point_up:
- \nاضافات يومية :link: \n الدعم الفني للمساعدةة : https://discord.gg/QfB8p2S  :rose:  \n وشكرا لكم :lizard: **`)
-
-
- .setTimestamp()
-    });
-
-})
-cc.on("collect", r => {
-    zg.delete();
-	msg.delete();
-})
-	 }).then(msg => msg.delete(15000));
-	 })
-	 })
-	 })
-})
-	 }
-	 });
 
 //اشتغل
 
@@ -1013,7 +924,7 @@ if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('لي�
 });
 
 client.on("message", message => { // Leaked by [ @Fr3on Gamer#9338 ]
-    if(message.content.startsWith('$system-man3')) {
+    if(message.content.startsWith('$system-7may')) {
       message.channel.send(`**الخطوات المطلوبة لتشغيل مانع التهكير\n1- رفع رتبه البوت تحت رتبة صاحب السيرفر مباشرا : http://prntscr.com/l4nues \n2-اعطاء البوت صلاحية ADMINISTRATOR : http://prntscr.com/k5afpd \n وهكذا تم تفعيل مانع التهكير بنجاح وبلا اي مشاكل اذا واجهت اي مشكله توجه لسيرفر الدعم** :white_check_mark: `)
     }
   });
