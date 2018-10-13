@@ -32,6 +32,31 @@ var fs = require('fs');
 
 //////////////////////////////////////////////iyvu
 
+
+
+
+
+
+client.on('message', async message => {
+if(message.author.bot) return;
+if (message.channel.guild) {
+if (message.content.startsWith(prefix + 'voicerank')) {
+message.channel.send(`Your XP : ${voice[message.member.id].xp}
+Your Level : ${voice[message.member.id].level}`);
+        if(e) console.log(e);
+      };
+}});
+
+
+
+
+
+
+
+
+
+
+
 var EpicEdiTeD = {};
 client.on("message", function(message){
 if (message.content.startsWith(prefix + "rank")) {
