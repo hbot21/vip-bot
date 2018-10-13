@@ -35,6 +35,42 @@ var fs = require('fs');
 
 
 
+client.on('message', message => {
+    if (message.author.bot) return;
+     if (message.content === prefix + "inv") {
+		 message.channel.send('**تم ارسال رابط البوت خاص**');
+            
+	
+		 
+
+
+ message.author.sendMessage(`
+ **
+
+رابط البوت
+
+https://discordapp.com/oauth2/authorize?client_id=481622608534831104&permissions=2080898225&scope=bot
+
+الشرح عن البوت
+' Vip Bot Discord.
+$help - لرؤية الأوامر :comet: 
+$inv - لدعوة البوت :wine_glass: 
+معلومات عن البوت :thinking: 
+بوت ديسكورت متكامل :soccer: :microphone: :earth_americas: 
+يوجد داخل البوت خاصية منع التهكير مجانا وبسهوله تامة :scream: 
+صيانة دورية :stopwatch: :wrench: 
+24 ساعة :point_up:
+
+اضافات يومية :link: 
+الدعم الفني للمساعدةة : https://discord.gg/4U8jNCa  :rose:
+
+
+
+ **
+`);
+
+    }
+});
 
 
 
