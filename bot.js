@@ -33,29 +33,50 @@ var fs = require('fs');
 //////////////////////////////////////////////iyvu
 
 
+var json = JSON.parse(fs.readFileSync("json.json", "utf8"));
 
-
-
-
-client.on('message', async message => {
-if(message.author.bot) return;
-if (message.channel.guild) {
-if (message.content.startsWith(prefix + 'voicerank')) {
-message.channel.send(`Your XP : ${voice[message.member.id].xp}
-Your Level : ${voice[message.member.id].level}`);
-        if(e) console.log(e);
-      };
-}});
-
-
-
-
-
-
-
-
-
-
+client.on("message", (message) => {
+    var command = message.content.split(" ")[0];
+    command = command.slice(prefix.length);
+    if (!message.content.startsWith(prefix)) return;
+    switch(command) {
+        case "mut" : 
+        
+        if (!message.channel.type =="text") return;
+        if (!message.member.hasPermission("MANAGE_CHANNELS")) return message.reply("**Sorry, You Don't Have `MANAGE_CHANNELS` permission**")
+        if(!message.guild.member(client.user).hasPermission("MANAGE_CHANNELS")) return message.reply("**I Don't Have `MANAGE_CHANNELS` Permission**").then(msg => msg.delete(6000))
+        if (!message.mentions.members.first()) return message.reply("**Mention a user!??**")
+        message.guild.channels.forEach(c => {
+            c.overwritePermissions(message.mentions.members.first().id, {
+                SEND_MESSAGES : false,
+                CONNECT : false
+            })
+        })
+        json[message.guild.id + message.mentions.members.first().id] = {muted : true};
+        fs.writeFile("json.json", JSON.stringify(json), err => {
+            if (err) console.error(err);
+        });
+        message.channel.send(`** <@${message.mentions.members.first().id}> Muted in the server!??**`);
+        break;
+        case "unmut" : 
+        if (!message.channel.type =="text") return;
+        if (!message.member.hasPermission("MANAGE_CHANNELS")) return message.reply("**Sorry, You Don't Have `MANAGE_CHANNELS` permission**")
+        if(!message.guild.member(client.user).hasPermission("MANAGE_CHANNELS")) return message.reply("**I Don't Have `MANAGE_CHANNELS` Permission**").then(msg => msg.delete(10000))
+        if (!message.mentions.members.first()) return message.reply("**Mention a user!??**")
+        if (!message.mentions.members.first()) return;
+        message.guild.channels.forEach(c => {
+            c.overwritePermissions(message.mentions.members.first().id, {
+                SEND_MESSAGES : null,
+                CONNECT : null
+            })
+        })
+        json[message.guild.id + message.mentions.members.first().id] = {muted : false};
+        fs.writeFile("json.json", JSON.stringify(json), err => {
+            if (err) console.error(err);
+        });
+        message.channel.send(`** <@${message.mentions.members.first().id}> Unmuted!??**`);
+    }
+})
 
 var EpicEdiTeD = {};
 client.on("message", function(message){
