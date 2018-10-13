@@ -33,6 +33,30 @@ var fs = require('fs');
 //////////////////////////////////////////////iyvu
 
 
+client.on('message', message => {
+if(message.content.startsWith(prefix +"server")){
+  if(!message.guild.member(message.author).hasPermission("ADMINISTRATOR")) return message.reply(`**هذه الخاصية للادارة فقط** :negative_squared_cross_mark: `)
+if(!message.channel.guild) return message.reply(' ');
+const millis = new Date().getTime() - message.guild.createdAt.getTime();
+const now = new Date();
+dateFormat(now, 'dddd, mmmm dS, yyyy, h:MM:ss TT');
+const verificationLevels = ['None', 'Low', 'Medium', 'Insane', 'Extreme'];
+const days = millis / 1000 / 60 / 60 / 24;
+let roles = client.guilds.get(message.guild.id).roles.map(r => r.name);
+var embed  = new Discord.RichEmbed()
+.setAuthor(message.guild.name, message.guild.iconURL)
+.addField("**🆔 Server ID:**", message.guild.id,true)
+.addField("**📅 Created On**", message.guild.createdAt.toLocaleString(),true)
+.addField("**👑 Owned by**",`${message.guild.owner.user.username}#${message.guild.owner.user.discriminator}`)
+.addField("👥 Members ",`[${message.guild.memberCount}]`,true)
+.addField('**💬 Channels **',`**${message.guild.channels.filter(m => m.type === 'text').size}**` + ' text | Voice  '+ `**${message.guild.channels.filter(m => m.type === 'voice').size}** `,true)
+.addField("**🌍 Others **" , message.guild.region,true)
+.addField("** 🔐 Roles **",`**[${message.guild.roles.size}]** Role `,true)
+.setColor('#000000')
+message.channel.sendEmbed(embed)
+
+}
+});
 
 
 client.on('message', message => {
@@ -313,71 +337,11 @@ client.on("message", message => { // Leaked by [ @Fr3on Gamer#9338 ]
     });
 
 
-client.on("message",function(message) { // Leaked by [ @M3a4x ]
-    if(message.content.startsWith(prefix + 'bot')) {
-        var uptime = client.uptime;
 
-    var days = 0;
-    var hours = 0;
-    var minutes = 0;
-    var seconds = 0;
-    var notCompleted = true;
 
-    while (notCompleted) {
 
-        if (uptime >= 8.64e+7) {
 
-            days++;
-            uptime -= 8.64e+7;
 
-        } else if (uptime >= 3.6e+6) {
-
-            hours++;
-            uptime -= 3.6e+6;
-
-        } else if (uptime >= 60000) {
-
-            minutes++;
-            uptime -= 60000;
-
-        } else if (uptime >= 1000) {
-            seconds++;
-            uptime -= 1000;
-
-        }
-
-        if (uptime < 1000)  notCompleted = false;
-
-    }
-
-var v1 = new Discord.RichEmbed()
-  v1.setTimestamp(new Date())
-  v1.setColor("#6a109d")
-  v1.setDescription('***__ انتظر .. جاري الحصول علي البيانات __***')
-  v1.setFooter("# | Vip Bot |")
-var heroo = new Discord.RichEmbed()
-.setColor('#6a109d')
-.setTimestamp(new Date())
-.setThumbnail(client.user.avatarURL)
-.setTitle('Vip Bot Info')
-.setURL('https://discordapp.com/oauth2/authorize?client_id=481622608534831104&permissions=2080898225&scope=bot')
-.setAuthor(client.user.username,client.user.avatarURL)
-.addField("**البرفكس** :",`**[ ${prefix} ]**`,true)
-.addField("**السيرفرات** :","**[ "+client.guilds.size+" ]**",true)
-.addField("**القنوات** :","**[ "+client.channels.size+" ]**",true)
-.addField("**المستخدمين** :","**[ "+client.users.size+" ]**",true)
-.addField("**اسم البوت** : ","**[ "+client.user.username+" ]**",true)
-.addField("**ايدي البوت **:","**[ "+client.user.id+" ]**",true)
-.addField("**الحجم المستخدم** :",`**[ ${(process.memoryUsage().rss / 1048576).toFixed()}MB ]**`,true)
-.addField("**موعد الاقلاع** :",`**[** **Days:** \`${days}\` **Hours:** \`${hours}\` **Minutes:** \`${minutes}\` **Seconds:** \`${seconds}\` **]**`,true)
-.setFooter("S TeaM  |");
-  message.channel.send({embed:v1}).then(m => {
-      setTimeout(() => {
-         m.edit({embed:heroo});
-      },3000);
-  });
-}
-});
 //انقليزي حلو
 client.on("message", message => { // Leaked by [ @Fr3on Gamer#9338 ]
 var args = message.content.split(" ").slice(1).join(" ")
